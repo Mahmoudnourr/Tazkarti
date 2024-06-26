@@ -1,0 +1,70 @@
+.navbar{
+    display: flex;
+    
+}
+.im
+{
+    width: 99px;
+    height: 29px;
+    margin-left: 100px;
+}
+.navv
+{
+    background-color: #219f45;
+}
+.font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 332;
+  font-style: normal;
+}
+.ticket-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.ticket-box {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.ticket-box:hover {
+    transform: scale(1.05);
+}
+
+.sports {
+    background-color: #2f5233;
+}
+
+.entertainment {
+    background-color: #a95c21;
+}
+
+.ticket-icon img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.ticket-text h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;  /* Make the text bold */
+}
+
+.ticket-text p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}

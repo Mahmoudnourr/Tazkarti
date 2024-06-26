@@ -1,0 +1,102 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=.;Initial Catalog=TazkartiDB;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "JWT": {
+    "Key": "H7GTh2Hobt6tS7D0h/C9hYXQyef7psYqc2dnqXpuvdM=",
+    "Issuer": "SecurApi",
+    "Audience": "SecurApiuser",
+    "DurationInDays": 30
+  }
+}
+---------------------------------------------------------
+2-
+jwt class :
+namespace Tazkarti.Helper
+{
+	public class JWT
+	{
+		public string Key { get; set; }
+		public string Issuer { get; set; }
+		public string Audience { get; set; }
+		public string DurationInDays { get; set; }
+	}
+}
+----------------------------------------------------------
+3-
+create applicationuser :
+using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
+
+namespace Tazkarti.Models.AppUser
+{
+	public class ApplicationUser:IdentityUser	
+	{
+		
+		[Required,MaxLength(100)]	
+		public string? FirstName { get; set; }
+		[Required, MaxLength(100)]
+		public string? LastName { get; set; }
+		public byte[] Photo { get; set; }
+	}
+}
+-------------------------------------------------------------
+4-
+	public class TazkartiDB : IdentityDbContext<ApplicationUser>
+-------------------------------------------------------------
+5-
+in program.cs :
+builder.Services.Configure<JWT>(builder.Configuration.GetSection("JWT"));
+builder.Services.AddDbContext<TazkartiDB>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+	.AddEntityFrameworkStores<TazkartiDB>();
+-----------------------------------------------------------------------
+6- creat an empty migration :
+  migrationBuilder.InsertData(
+      table: "AspNetRoles",
+      columns: new[] { "Id", "Name", "NormalizedName", "ConcurrencyStamp" },
+      values:new object[] {Guid.NewGuid().ToString(),"Admin","Admin".ToUpper(),Guid.NewGuid().ToString()}
+      );
+------------------------------------
+		migrationBuilder.InsertData(
+			table: "AspNetRoles",
+			columns: new[] { "Id", "Name", "NormalizedName", "ConcurrencyStamp" },
+			values: new object[] { Guid.NewGuid().ToString(), "User", "User".ToUpper(), Guid.NewGuid().ToString() }
+			);
+---------------------------------------------------------------------------------------
+7-create Iauthservice ,authservice and inject it 
+- app.useAuthentication()before authorization 
+------------------------------------------------------
+8-
+add authentication in program.cs :
+builder.Services.AddAuthentication(options => {
+	options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+	options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(o =>
+{
+	o.RequireHttpsMetadata = false;
+	o.SaveToken = false;
+	o.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+	{
+		ValidateIssuer = true,
+		ValidateIssuerSigningKey = true,
+		ValidateAudience = true,
+		ValidateLifetime = true,
+		ValidIssuer = builder.Configuration["JWT:Issuer"],
+		ValidAudience = builder.Configuration["JWT:Audience"],
+		IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]))
+	};
+});
+// before the app is build 
+-----------------------------------------------------------------
+9-
+prepare registration Endpoint :
