@@ -141,3 +141,4 @@ D:\mvc projs\tazkarti\Tazkarti\obj\Debug\net8.0\refint\Tazkarti.dll
 D:\mvc projs\tazkarti\Tazkarti\obj\Debug\net8.0\Tazkarti.pdb
 D:\mvc projs\tazkarti\Tazkarti\obj\Debug\net8.0\Tazkarti.genruntimeconfig.cache
 D:\mvc projs\tazkarti\Tazkarti\obj\Debug\net8.0\ref\Tazkarti.dll
+D:\mvc projs\tazkarti\Tazkarti\obj\Debug\net8.0\Tazkarti.sourcelink.json

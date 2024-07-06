@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fr8IVSyRqfJzNklKAUQhE8XVc319USOQkPuo2UCZvFI=",
+  "Hash": "sKNl//hnR2WMMnOFXkdPr9Yt5ldm8wXRzjW2tg0wITg=",
   "Source": "Tazkarti",
   "BasePath": "_content/Tazkarti",
   "Mode": "Default",
@@ -2200,6 +2200,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\new\\style.css"
+    },
+    {
+      "Identity": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\styles\\RegisterStyle.css",
+      "SourceId": "Tazkarti",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\",
+      "BasePath": "_content/Tazkarti",
+      "RelativePath": "new/styles/RegisterStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\new\\styles\\RegisterStyle.css"
     },
     {
       "Identity": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\tazkarti.svg",

@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "D:\\mvc projs\\tazkarti\\Tazkarti\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|d:\\mvc projs\\tazkarti\\tazkarti\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|d:\\mvc projs\\tazkarti\\tazkarti\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|solutionrelative:views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|d:\\mvc projs\\tazkarti\\tazkarti\\wwwroot\\new\\styles\\registerstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|solutionrelative:wwwroot\\new\\styles\\registerstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|d:\\mvc projs\\tazkarti\\tazkarti\\wwwroot\\new\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|solutionrelative:wwwroot\\new\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|d:\\mvc projs\\tazkarti\\tazkarti\\views\\shared\\_normalview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|solutionrelative:views\\shared\\_normalview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|d:\\mvc projs\\tazkarti\\tazkarti\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|d:\\mvc projs\\tazkarti\\tazkarti\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|d:\\mvc projs\\tazkarti\\tazkarti\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|d:\\mvc projs\\tazkarti\\tazkarti\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|solutionrelative:views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|d:\\mvc projs\\tazkarti\\tazkarti\\wwwroot\\new\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7E36E70E-7A90-4568-B7EE-C8EDF4CB7D36}|Tazkarti.csproj|solutionrelative:wwwroot\\new\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,59 +58,83 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "RegisterStyle.css",
+              "DocumentMoniker": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\styles\\RegisterStyle.css",
+              "RelativeDocumentMoniker": "wwwroot\\new\\styles\\RegisterStyle.css",
+              "ToolTip": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\styles\\RegisterStyle.css",
+              "RelativeToolTip": "wwwroot\\new\\styles\\RegisterStyle.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-04T09:33:13.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_NoRmaLView.cshtml",
+              "DocumentMoniker": "D:\\mvc projs\\tazkarti\\Tazkarti\\Views\\Shared\\_NoRmaLView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_NoRmaLView.cshtml",
+              "ToolTip": "D:\\mvc projs\\tazkarti\\Tazkarti\\Views\\Shared\\_NoRmaLView.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_NoRmaLView.cshtml",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAkwCcAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T16:37:30.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "style.css",
               "DocumentMoniker": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\style.css",
               "RelativeDocumentMoniker": "wwwroot\\new\\style.css",
               "ToolTip": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\style.css",
               "RelativeToolTip": "wwwroot\\new\\style.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-06-26T07:45:23.014Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\mvc projs\\tazkarti\\Tazkarti\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\mvc projs\\tazkarti\\Tazkarti\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAEAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACsAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-14T08:07:12.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T08:07:12.718Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\mvc projs\\tazkarti\\Tazkarti\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\mvc projs\\tazkarti\\Tazkarti\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAiwBwAAAAVAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAkwCAAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-14T07:56:25.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T07:56:25.269Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Register.cshtml",
               "DocumentMoniker": "D:\\mvc projs\\tazkarti\\Tazkarti\\Views\\Auth\\Register.cshtml",
               "RelativeDocumentMoniker": "Views\\Auth\\Register.cshtml",
               "ToolTip": "D:\\mvc projs\\tazkarti\\Tazkarti\\Views\\Auth\\Register.cshtml",
               "RelativeToolTip": "Views\\Auth\\Register.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAFkAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-14T07:06:48.115Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\mvc projs\\tazkarti\\Tazkarti\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -110,8 +142,7 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T06:56:08.292Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T06:56:08.292Z"
             }
           ]
         }

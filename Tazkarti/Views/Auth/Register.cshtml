@@ -1,4 +1,97 @@
 ﻿@model Tazkarti.Models.AuthModels.RegisterModel
 @{
-	 Layout = "~/Views/Shared/_Layout.cshtml";
+	Layout = "~/Views/Shared/_NoRmaLView.cshtml";
 }
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><title>Registeration</title>
+        
+    <link href="/new/styles/RegisterStyle.css" rel="stylesheet" />
+    </head>
+    <body >
+      <div class="RegContainer">
+          <div class="f-con">
+              <form action="/" method="post" class="inputs">
+               <div class="t-inp">
+                    <div>
+                        <label for="exampleInputEmail1" class="form-label mt-4">First Name</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter First Name">
+                    </div>
+                    <div>
+                        <label for="exampleInputEmail1" class="form-label mt-4">Last Name</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Last Name">
+                    </div>
+               </div>
+               <div class="t-inp">
+                    <div>
+                        <label for="username" class="form-label mt-4">User Name</label>
+                        <input type="text" class="form-control"  placeholder="Enter User Name">
+                    </div>
+                    <div>
+                        <label for="exampleInputEmail1" class="form-label mt-4">Email</label>
+                        <input type="text" class="form-control"  placeholder="Enter Email">
+                    </div>
+               </div>
+                <div class="t-inp">
+                    <div>
+                        <label for="password" class="form-label mt-4">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter The Password" required>
+                    </div>
+                    <div>
+                        <label for="Confirmed password" class="form-label mt-4">Confirm Password</label>
+                        <input type="password" class="form-control" placeholder="Confirm The password" required>
+                    </div>
+                </div>
+                <div class="t-inp">
+                        <div>
+                            <label for="exampleInputEmail1" class="form-label mt-4">Phone Number</label>
+                        <input type="tel" class="form-control" pattern="\+20\d{9}" placeholder="+20XXXXXXXXX" required name="Phone">
+                        </div>
+                   
+                    <div>
+                        <label for="exampleSelect1" class="form-label mt-4">City</label>
+                        <select class="form-select" id="exampleSelect1" name="City">
+                            <option value="alexandria">Alexandria</option>
+                            <option value="aswan">Aswan</option>
+                            <option value="asyut">Asyut</option>
+                            <option value="beheira">Beheira</option>
+                            <option value="beni_suef">Beni Suef</option>
+                            <option value="cairo">Cairo</option>
+                            <option value="dakahlia">Dakahlia</option>
+                            <option value="damietta">Damietta</option>
+                            <option value="faiyum">Faiyum</option>
+                            <option value="gharbia">Gharbia</option>
+                            <option value="giza">Giza</option>
+                            <option value="ismailia">Ismailia</option>
+                            <option value="kafr_el_sheikh">Kafr El Sheikh</option>
+                            <option value="luxor">Luxor</option>
+                            <option value="matruh">Matruh</option>
+                            <option value="minya">Minya</option>
+                            <option value="monufia">Monufia</option>
+                            <option value="new_valley">New Valley</option>
+                            <option value="north_sinai">North Sinai</option>
+                            <option value="port_said">Port Said</option>
+                            <option value="qalyubia">Qalyubia</option>
+                            <option value="qena">Qena</option>
+                            <option value="red_sea">Red Sea</option>
+                            <option value="sharqia">Sharqia</option>
+                            <option value="sohag">Sohag</option>
+                            <option value="south_sinai">South Sinai</option>
+                            <option value="suez">Suez</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="o-inp">
+                    <div class="s">
+                        <label for="formFile" class="form-label mt-4">Add Your Photo</label>
+                        <input class="form-control" type="file" id="formFile" name="Photo">
+                    </div>
+                </div>
+               <div class="o-inp b">
+                    <button type="submit" class="btn btn-primary btn-lg bb">Submit</button>
+               </div>
+            </form>
+          </div>
+      </div>
+
+    </body>
+</html>
