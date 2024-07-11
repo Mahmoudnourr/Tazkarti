@@ -1,9 +1,10 @@
-﻿using Tazkarti.Models.AuthModels;
+﻿using Tazkarti.DTOS;
+using Tazkarti.Models.AuthModels;
 
 namespace Tazkarti.Services
 {
     public interface IAuthService
 	{
-		Task<Authmodel> RegistrationAsync(RegisterModel model);
+		Task<RegistrationResult> RegistrationAsync(RegisterModel model);
 	}
 }

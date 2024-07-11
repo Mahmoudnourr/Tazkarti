@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tazkarti")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6c91ab9737d18f9f0682061228b43ba10041cca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc189823768e7c492dde78844ce79a9c245050e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tazkarti")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tazkarti")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

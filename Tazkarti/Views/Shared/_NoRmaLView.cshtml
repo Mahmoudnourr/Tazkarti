@@ -38,5 +38,11 @@
         <p>&copy; 2023 Tazkarti. All rights reserved.</p>
         <p>Developed and Powered by ELNOUR Group and Payment by Paypal</p>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+   
+    @await Component.InvokeAsync("NToastNotify")
 </body>
 </html>

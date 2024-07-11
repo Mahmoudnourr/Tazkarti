@@ -54,3 +54,7 @@
      
     box-shadow: none; 
 }
+.t-inp da{
+    display:flex;
+    align-content:center;
+}

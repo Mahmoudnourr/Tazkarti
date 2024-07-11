@@ -163,6 +163,10 @@ namespace Tazkarti.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -208,7 +212,6 @@ namespace Tazkarti.Migrations
                         .HasColumnType("bit");
 
                     b.Property<byte[]>("Photo")
-                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.Property<string>("SecurityStamp")

@@ -10,6 +10,8 @@ namespace Tazkarti.Models.AppUser
 		public string? FirstName { get; set; }
 		[Required, MaxLength(100)]
 		public string? LastName { get; set; }
-		public byte[] Photo { get; set; }
+		public byte[]? Photo { get; set; }
+		public string City { get; set; }
+
 	}
 }

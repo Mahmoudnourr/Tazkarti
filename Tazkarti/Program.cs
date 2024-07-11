@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using NToastNotify;
 using System.Text;
 using Tazkarti.Data;
 using Tazkarti.Helper;
@@ -26,7 +27,7 @@ namespace Tazkarti
 			builder.Services.AddDbContext<TazkartiDB>(options =>
 				options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 			);
-
+			
 			// Add Identity services
 			builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 				.AddEntityFrameworkStores<TazkartiDB>();
@@ -53,8 +54,16 @@ namespace Tazkarti
 
 			// Dependency Injection
 			builder.Services.AddScoped<IAuthService, AuthService>();
+            // add toaster 
+            builder.Services.AddMvc().AddNToastNotifyToastr(new NToastNotify.ToastrOptions()
+            {
+                ProgressBar = true,
+                PositionClass = ToastPositions.TopRight,
+                PreventDuplicates = true,
+                CloseButton = true,
+            });
 
-			var app = builder.Build();
+            var app = builder.Build();
 
 			// Configure the HTTP request pipeline.
 			if (!app.Environment.IsDevelopment())
@@ -69,8 +78,8 @@ namespace Tazkarti
 
 			app.UseAuthentication();
 			app.UseAuthorization();
-
-			app.MapControllerRoute(
+            app.UseNToastNotify();
+            app.MapControllerRoute(
 				name: "default",
 				pattern: "{controller=Home}/{action=Index}/{id?}");
 

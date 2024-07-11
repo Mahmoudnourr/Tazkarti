@@ -1,4 +1,4 @@
-﻿@model Tazkarti.Models.AuthModels.RegisterModel
+﻿@model Tazkarti.Models.AuthModels.RegisterModel 
 @{
 	Layout = "~/Views/Shared/_NoRmaLView.cshtml";
 }
@@ -10,46 +10,56 @@
     <body >
       <div class="RegContainer">
           <div class="f-con">
-              <form action="/" method="post" class="inputs">
+            <form asp-action="SaveRegister" method="post" class="inputs">
+                @Html.AntiForgeryToken()
+                <div asp-validation-summary="All" class="text-danger"></div>
                <div class="t-inp">
                     <div>
                         <label for="exampleInputEmail1" class="form-label mt-4">First Name</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter First Name">
+                        <input type="text" class="form-control"   placeholder="Enter First Name" required name="FirstName" value="@Model.FirstName">
+                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
                     </div>
                     <div>
                         <label for="exampleInputEmail1" class="form-label mt-4">Last Name</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Last Name">
+                        <input type="text" class="form-control"  placeholder="Enter Last Name" required name="LastName" value="@Model.LastName">
+                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
                     </div>
                </div>
                <div class="t-inp">
                     <div>
                         <label for="username" class="form-label mt-4">User Name</label>
-                        <input type="text" class="form-control"  placeholder="Enter User Name">
+                        <input type="text" class="form-control" placeholder="Enter User Name" required name="UserName" value="@Model.UserName">
+                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
                     </div>
                     <div>
                         <label for="exampleInputEmail1" class="form-label mt-4">Email</label>
-                        <input type="text" class="form-control"  placeholder="Enter Email">
+                        <input type="text" class="form-control" placeholder="Enter Email" required name="Email" value="@Model.Email">
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                     </div>
                </div>
                 <div class="t-inp">
                     <div>
                         <label for="password" class="form-label mt-4">Password</label>
-                        <input type="password" class="form-control" placeholder="Enter The Password" required>
+                        <input type="password" class="form-control" placeholder="Enter The Password" required name="Password" >
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
                     </div>
                     <div>
                         <label for="Confirmed password" class="form-label mt-4">Confirm Password</label>
-                        <input type="password" class="form-control" placeholder="Confirm The password" required>
+                        <input type="password" class="form-control" placeholder="Confirm The password" required name="ConfirmedPassword">
+                        @Html.ValidationMessageFor(model => model.ConfirmedPassword, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="t-inp">
                         <div>
                             <label for="exampleInputEmail1" class="form-label mt-4">Phone Number</label>
-                        <input type="tel" class="form-control" pattern="\+20\d{9}" placeholder="+20XXXXXXXXX" required name="Phone">
+                            <input type="tel" class="form-control" pattern="\+20\d{10}" placeholder="+20XXXXXXXXX" required name="Phone" required value="@Model.Phone">
+                        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
                         </div>
                    
                     <div>
                         <label for="exampleSelect1" class="form-label mt-4">City</label>
-                        <select class="form-select" id="exampleSelect1" name="City">
+                        <select class="form-select" id="exampleSelect1" name="City" value="@Model.City">
+                            <option value="">Select a city</option>
                             <option value="alexandria">Alexandria</option>
                             <option value="aswan">Aswan</option>
                             <option value="asyut">Asyut</option>
@@ -78,20 +88,29 @@
                             <option value="south_sinai">South Sinai</option>
                             <option value="suez">Suez</option>
                         </select>
+                        @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
                     </div>
                 </div>
-                <div class="o-inp">
+               <!--  <div class="o-inp">
                     <div class="s">
                         <label for="formFile" class="form-label mt-4">Add Your Photo</label>
-                        <input class="form-control" type="file" id="formFile" name="Photo">
+                        <input class="form-control" type="file" id="formFile" name="Phwoto" >
                     </div>
                 </div>
+                 -->
+               
                <div class="o-inp b">
                     <button type="submit" class="btn btn-primary btn-lg bb">Submit</button>
                </div>
             </form>
           </div>
       </div>
-
+    @section Scripts
+    {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+     }
+ 
     </body>
 </html>
