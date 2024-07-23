@@ -1,26 +1,27 @@
-﻿<!DOCTYPE html>
+﻿@model Tazkarti.Models.AppUser.ApplicationUser 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/new/bootstrap.min.css">
-   
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,332;1,332&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="/new/style.css">
+    <link rel="stylesheet" href="/new/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@700&display=swap" rel="stylesheet">
     <title>@ViewData["Title"]</title>
 </head>
-<body>  
+<body>
     <nav class="navbar navbar-expand-lg navv" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand"  asp-controller="Home" asp-action="Index"><img src="/new/logo1.svg" alt="" class="im"></a>
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img src="/new/logo1.svg" alt="" class="im"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -28,9 +29,22 @@
                 <ul class="navbar-nav me-auto">
                 </ul>
                 <div class="d-flex">
-                    <form>
-                        <a  asp-action="Register" asp-controller="Auth"> <button type="button" class="btn btn-light me-2 ">Register</button></a>
-                        <a  asp-action="Login" asp-controller="Auth">  <button type="button" class="btn btn-light">Login</button></a>
+                    <ul class="navbar-nav flex-row">
+                        <li class="nav-item me-3 me-lg-1">
+                            <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
+                                     class="rounded-circle"
+                                     height="22"
+                                     alt="Black and White Portrait of a Man"
+                                     loading="lazy" />
+                                <strong class="d-none d-sm-block ms-1">@Model.UserName</strong>
+                            </a>
+                        </li>
+                    </ul>
+                    <form asp-action="Logout" asp-controller="Auth" method="post">
+                       
+                          <button type="submit" class="btn btn-light">Logout</button>
+                        
                     </form>
                 </div>
             </div>

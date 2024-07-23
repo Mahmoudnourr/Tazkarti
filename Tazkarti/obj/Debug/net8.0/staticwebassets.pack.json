@@ -465,6 +465,10 @@
       "PackagePath": "staticwebassets\\new\\style.css"
     },
     {
+      "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\styles\\LoginStyle.css",
+      "PackagePath": "staticwebassets\\new\\styles\\LoginStyle.css"
+    },
+    {
       "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\styles\\RegisterStyle.css",
       "PackagePath": "staticwebassets\\new\\styles\\RegisterStyle.css"
     },

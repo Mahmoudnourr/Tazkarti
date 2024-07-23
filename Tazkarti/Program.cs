@@ -1,9 +1,7 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using NToastNotify;
-using System.Text;
 using Tazkarti.Data;
 using Tazkarti.Helper;
 using Tazkarti.Models.AppUser;
@@ -11,51 +9,40 @@ using Tazkarti.Services;
 
 namespace Tazkarti
 {
-	public class Program
-	{
-		public static void Main(string[] args)
-		{
-			var builder = WebApplication.CreateBuilder(args);
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
 
-			// Bind JWT settings
-			builder.Services.Configure<JWT>(builder.Configuration.GetSection("JWT"));
+            // Add services to the container.
+            builder.Services.AddControllersWithViews();
 
-			// Add services to the container.
-			builder.Services.AddControllersWithViews();
+            // Add DbContext
+            builder.Services.AddDbContext<TazkartiDB>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+            );
 
-			// Add DbContext
-			builder.Services.AddDbContext<TazkartiDB>(options =>
-				options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-			);
-			
-			// Add Identity services
-			builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-				.AddEntityFrameworkStores<TazkartiDB>();
+            // Add Identity services
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<TazkartiDB>()
+                .AddDefaultTokenProviders();
 
-			// Add Authentication
-			builder.Services.AddAuthentication(options => {
-				options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-				options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-			}).AddJwtBearer(o =>
-			{
-				o.RequireHttpsMetadata = false;
-				o.SaveToken = false;
-				o.TokenValidationParameters = new TokenValidationParameters
-				{
-					ValidateIssuer = true,
-					ValidateIssuerSigningKey = true,
-					ValidateAudience = true,
-					ValidateLifetime = true,
-					ValidIssuer = builder.Configuration["JWT:Issuer"],
-					ValidAudience = builder.Configuration["JWT:Audience"],
-					IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]))
-				};
-			});
+            // Add Cookie Authentication
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/Auth/Login";
+                    options.AccessDeniedPath = "/Auth/AccessDenied";
+                });
 
-			// Dependency Injection
-			builder.Services.AddScoped<IAuthService, AuthService>();
-            // add toaster 
-            builder.Services.AddMvc().AddNToastNotifyToastr(new NToastNotify.ToastrOptions()
+            // Dependency Injection
+            builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            builder.Services.AddHttpContextAccessor();
+
+            // Add Toastr for notifications
+            builder.Services.AddMvc().AddNToastNotifyToastr(new NToastNotify.ToastrOptions
             {
                 ProgressBar = true,
                 PositionClass = ToastPositions.TopRight,
@@ -63,27 +50,32 @@ namespace Tazkarti
                 CloseButton = true,
             });
 
+            builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
             var app = builder.Build();
 
-			// Configure the HTTP request pipeline.
-			if (!app.Environment.IsDevelopment())
-			{
-				app.UseExceptionHandler("/Home/Error");
-				app.UseHsts();
-			}
+            // Configure the HTTP request pipeline.
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
 
-			app.UseHttpsRedirection();
-			app.UseStaticFiles();
-			app.UseRouting();
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
 
-			app.UseAuthentication();
-			app.UseAuthorization();
+            app.UseRouting();
+
+            // Authentication and Authorization middleware
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseNToastNotify();
+            app.MapRazorPages();
             app.MapControllerRoute(
-				name: "default",
-				pattern: "{controller=Home}/{action=Index}/{id?}");
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
-			app.Run();
-		}
-	}
+            app.Run();
+        }
+    }
 }

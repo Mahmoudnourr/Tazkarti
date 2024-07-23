@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RJflSjXRlatlZt/WyvccI7jsUe2ZR8r+uo8EvMqkhMg=",
+  "Hash": "ZedPjl7k1eSLZ8hXli08cnJIl+MtbeuJ6jXlddd57m0=",
   "Source": "Tazkarti",
   "BasePath": "_content/Tazkarti",
   "Mode": "Default",
@@ -2276,6 +2276,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\new\\style.css"
+    },
+    {
+      "Identity": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\styles\\LoginStyle.css",
+      "SourceId": "Tazkarti",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\",
+      "BasePath": "_content/Tazkarti",
+      "RelativePath": "new/styles/LoginStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\new\\styles\\LoginStyle.css"
     },
     {
       "Identity": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\styles\\RegisterStyle.css",

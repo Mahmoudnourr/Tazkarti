@@ -6,5 +6,6 @@ namespace Tazkarti.Services
     public interface IAuthService
 	{
 		Task<RegistrationResult> RegistrationAsync(RegisterModel model);
+		Task<LoginResult>LoginAsync(LoginModel model);
 	}
 }

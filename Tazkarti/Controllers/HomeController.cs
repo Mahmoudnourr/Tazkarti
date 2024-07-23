@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Tazkarti.Models;
@@ -12,7 +13,7 @@ namespace Tazkarti.Controllers
 		{
 			_logger = logger;
 		}
-
+		
 		public IActionResult Index()
 		{
 			return View();

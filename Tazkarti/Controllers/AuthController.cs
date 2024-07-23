@@ -6,6 +6,7 @@ using Tazkarti.DTOS;
 using Tazkarti.Models.AppUser;
 using Tazkarti.Models.AuthModels;
 using Tazkarti.Services;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Tazkarti.Controllers
 {
@@ -51,6 +52,56 @@ namespace Tazkarti.Controllers
 			return View("Register",model);
 			
 		}
-		
-	}
+		[HttpGet]
+		public IActionResult Login()
+		{
+			LoginModel loginModel = new LoginModel();
+			return View("Login",loginModel);
+		}
+		[HttpPost]
+		public async Task<IActionResult> login(LoginModel model)
+		{
+			if (ModelState.IsValid)
+			{
+				LoginResult res = new LoginResult();
+				res= await _authService.LoginAsync(model);
+				if (res is not null)
+				{
+					if (res.Success)
+					{
+						CookieOptions cookieOptions = new CookieOptions();
+						//cookieOptions.Expires = DateTime.Now.AddSeconds(10);
+						Response.Cookies.Append("UserName",res.UserName, cookieOptions);
+                       
+                        return RedirectToAction("LoggedIn", "Log");
+
+                    }
+					else
+					{
+						foreach (var error in res.Errors)
+						{
+							ModelState.AddModelError(string.Empty, error);
+                        }
+                    }
+                }
+				
+            }
+			
+			return View("Login",model);
+		}
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            _toastNotification.AddSuccessToastMessage("You have been logged out successfully.");
+            return RedirectToAction("Index", "Home");
+        }
+        [HttpGet]
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+    }
+
 }

@@ -410,7 +410,6 @@ D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\refs\System.Text.Encoding.CodePa
 D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\refs\System.Text.Encoding.dll
 D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\refs\System.Text.Encoding.Extensions.dll
 D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\refs\System.Text.Encodings.Web.dll
-D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\refs\System.Text.Json.dll
 D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\refs\System.Text.RegularExpressions.dll
 D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\refs\System.Threading.Channels.dll
 D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\refs\System.Threading.dll
@@ -448,3 +447,4 @@ D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\NToastNotify.dll
 D:\mvc projs\tazkarti\Tazkarti\obj\Debug\net8.0\Tazkarti.MvcApplicationPartsAssemblyInfo.cs
+D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\System.Text.Json.dll
