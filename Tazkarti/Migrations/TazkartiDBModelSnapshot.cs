@@ -17,7 +17,7 @@ namespace Tazkarti.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.6")
+                .HasAnnotation("ProductVersion", "8.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -331,19 +331,18 @@ namespace Tazkarti.Migrations
                     b.Property<string>("Location")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Stadium")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Stage")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Tournament")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("TournamentId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TournamentId");
 
                     b.ToTable("Matches");
                 });
@@ -387,7 +386,6 @@ namespace Tazkarti.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<byte[]>("Logo")
-                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Name")
@@ -397,6 +395,40 @@ namespace Tazkarti.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Teams");
+                });
+
+            modelBuilder.Entity("Tazkarti.Models.Sport.Tournament", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Year")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tournaments");
+                });
+
+            modelBuilder.Entity("Tazkarti.Models.Sport.TournamentTeam", b =>
+                {
+                    b.Property<int>("TournamentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TeamId")
+                        .HasColumnType("int");
+
+                    b.HasKey("TournamentId", "TeamId");
+
+                    b.HasIndex("TeamId");
+
+                    b.ToTable("TournamentsTeams");
                 });
 
             modelBuilder.Entity("Tazkarti.Models.Ticket", b =>
@@ -506,16 +538,27 @@ namespace Tazkarti.Migrations
                     b.Navigation("Ticket");
                 });
 
+            modelBuilder.Entity("Tazkarti.Models.Sport.Match", b =>
+                {
+                    b.HasOne("Tazkarti.Models.Sport.Tournament", "Tournament")
+                        .WithMany("Matches")
+                        .HasForeignKey("TournamentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Tournament");
+                });
+
             modelBuilder.Entity("Tazkarti.Models.Sport.MatchTeams", b =>
                 {
                     b.HasOne("Tazkarti.Models.Sport.Match", "Match")
-                        .WithMany()
+                        .WithMany("Teams")
                         .HasForeignKey("MatchId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Tazkarti.Models.Sport.Team", "Team")
-                        .WithMany()
+                        .WithMany("MatchTeams")
                         .HasForeignKey("TeamId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -544,6 +587,25 @@ namespace Tazkarti.Migrations
                     b.Navigation("Ticket");
                 });
 
+            modelBuilder.Entity("Tazkarti.Models.Sport.TournamentTeam", b =>
+                {
+                    b.HasOne("Tazkarti.Models.Sport.Team", "Team")
+                        .WithMany("TournamentTeams")
+                        .HasForeignKey("TeamId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Tazkarti.Models.Sport.Tournament", "Tournament")
+                        .WithMany("TournamentTeams")
+                        .HasForeignKey("TournamentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Team");
+
+                    b.Navigation("Tournament");
+                });
+
             modelBuilder.Entity("Tazkarti.Models.Ticket", b =>
                 {
                     b.HasOne("Tazkarti.Models.AppUser.ApplicationUser", "User")
@@ -558,6 +620,25 @@ namespace Tazkarti.Migrations
             modelBuilder.Entity("Tazkarti.Models.Entertainment.Category", b =>
                 {
                     b.Navigation("Events");
+                });
+
+            modelBuilder.Entity("Tazkarti.Models.Sport.Match", b =>
+                {
+                    b.Navigation("Teams");
+                });
+
+            modelBuilder.Entity("Tazkarti.Models.Sport.Team", b =>
+                {
+                    b.Navigation("MatchTeams");
+
+                    b.Navigation("TournamentTeams");
+                });
+
+            modelBuilder.Entity("Tazkarti.Models.Sport.Tournament", b =>
+                {
+                    b.Navigation("Matches");
+
+                    b.Navigation("TournamentTeams");
                 });
 #pragma warning restore 612, 618
         }

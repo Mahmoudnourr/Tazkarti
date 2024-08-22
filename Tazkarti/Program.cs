@@ -9,73 +9,74 @@ using Tazkarti.Services;
 
 namespace Tazkarti
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+	public class Program
+	{
+		public static void Main(string[] args)
+		{
+			var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            builder.Services.AddControllersWithViews();
+			// Add services to the container.
 
-            // Add DbContext
-            builder.Services.AddDbContext<TazkartiDB>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-            );
 
-            // Add Identity services
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<TazkartiDB>()
-                .AddDefaultTokenProviders();
+			// Add DbContext
+			builder.Services.AddDbContext<TazkartiDB>(options =>
+				options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+			);
 
-            // Add Cookie Authentication
-            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(options =>
-                {
-                    options.LoginPath = "/Auth/Login";
-                    options.AccessDeniedPath = "/Auth/AccessDenied";
-                });
+			// Add Identity services
+			builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+				.AddEntityFrameworkStores<TazkartiDB>()
+				.AddDefaultTokenProviders();
 
-            // Dependency Injection
-            builder.Services.AddScoped<IAuthService, AuthService>();
-            builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            builder.Services.AddHttpContextAccessor();
+			// Add Cookie Authentication
+			builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+				.AddCookie(options =>
+				{
+					options.LoginPath = "/Auth/Login";
+					options.AccessDeniedPath = "/Auth/AccessDenied";
+				});
+			builder.Services.AddControllersWithViews();
+			// Dependency Injection
+			builder.Services.AddScoped<IAuthService, AuthService>();
+			builder.Services.AddScoped<IAdminservice, AdminService>();
+			builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+			builder.Services.AddHttpContextAccessor();
 
-            // Add Toastr for notifications
-            builder.Services.AddMvc().AddNToastNotifyToastr(new NToastNotify.ToastrOptions
-            {
-                ProgressBar = true,
-                PositionClass = ToastPositions.TopRight,
-                PreventDuplicates = true,
-                CloseButton = true,
-            });
+			// Add Toastr for notifications
+			builder.Services.AddMvc().AddNToastNotifyToastr(new NToastNotify.ToastrOptions
+			{
+				ProgressBar = true,
+				PositionClass = ToastPositions.TopRight,
+				PreventDuplicates = true,
+				CloseButton = true,
+			});
 
-            builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
-            var app = builder.Build();
+			builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+			var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
-            if (!app.Environment.IsDevelopment())
-            {
-                app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
-            }
+			// Configure the HTTP request pipeline.
+			if (!app.Environment.IsDevelopment())
+			{
+				app.UseExceptionHandler("/Home/Error");
+				app.UseHsts();
+			}
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
+			app.UseHttpsRedirection();
+			app.UseStaticFiles();
 
-            app.UseRouting();
+			app.UseRouting();
 
-            // Authentication and Authorization middleware
-            app.UseAuthentication();
-            app.UseAuthorization();
+			// Authentication and Authorization middleware
+			app.UseAuthentication();
+			app.UseAuthorization();
 
-            app.UseNToastNotify();
-            app.MapRazorPages();
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+			app.UseNToastNotify();
+			app.MapRazorPages();
+			app.MapControllerRoute(
+				name: "default",
+				pattern: "{controller=Home}/{action=Index}/{id?}");
 
-            app.Run();
-        }
-    }
+			app.Run();
+		}
+	}
 }

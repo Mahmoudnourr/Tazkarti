@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_LoggedIn.cshtml";
+    ViewData["Title"] = "Tazkarti";
+}
+<html>
+<head>
+    <link href="/new/style.css" rel="stylesheet" />
+    <title>@ViewData["Title"]</title>
+    <link href="/new/styles/MatchStyle.css" rel="stylesheet" />
+</head>
+<body>
+    @for(int i=0;i<5; i++)
+    {
+        <div class="match-card">
+            <div class="match-info">
+                <div class="team-logos">
+                    <img src="/new/AlahlyLogo.jpeg" alt="Team 1 Logo">
+                    <img src="/new/MasryLogo.png" alt="Team 2 Logo">
+                </div>
+                <div class="match-details">
+                    <div><span>Al-Masry SC</span> vs <span>Al Ahly FC</span></div>
+                    <div>Tournament: EPL 2023/2024</div>
+                    <div>Match No.: 155 | Group: Week Eighteen | Stage: Second Stage</div>
+                </div>
+            </div>
+            <div class="stadium">
+                <img src="/new/stadium.svg" alt="Stadium Icon">
+                <div>Borg El Arab Stadium, Alex</div>
+            </div>
+            <div class="time">
+                <img src="/new/calendar.svg" alt="Calendar Icon">
+                <div>Fri 26 Jul 2024 | 09:00 PM</div>
+            </div>
+            <div class="book-ticket">
+                <div class="availability " style="padding-right:25px">
+                    <span class="dot" style="height: 10px; width: 10px; background-color: green; border-radius: 50%; display: inline-block;"></span>
+                    <span>Not Available</span>
+                </div>
+                <button>Book Ticket</button>
+
+            </div>
+        </div>
+
+    }
+</body>
+</html>

@@ -4,6 +4,7 @@ using Tazkarti.Models.AppUser;
 
 namespace Tazkarti.Controllers
 {
+    [Microsoft.AspNetCore.Authorization.Authorize(Roles = "User")]
     public class LogController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -19,7 +20,7 @@ namespace Tazkarti.Controllers
             
                 ApplicationUser user = new ApplicationUser();
                 user.UserName = _httpContextAccessor.HttpContext.Request.Cookies["UserName"];
-                return View("~/Views/Home/LoggedIn.cshtml", user);
+                return View("~/Views/User/LoggedIn.cshtml", user);
             
         }
     }

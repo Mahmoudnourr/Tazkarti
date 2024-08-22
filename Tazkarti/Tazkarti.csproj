@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Admin\Methods\_AddTeam.cshtml" />
     <Content Remove="Views\Shared\AccessDenied.cshtml" />
+    <Content Remove="wwwroot\js\Ref.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,11 +33,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Admin\Methods\_AddTeam.cshtml" />
     <_ContentIncludedByDefault Remove="Views\Shared\AccessDenied.cshtml" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\Ref.js" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Admin\Methods\_AddTeam.cshtml" />
     <None Include="Views\Shared\AccessDenied.cshtml" />
+    <None Include="wwwroot\js\Ref.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Admin\Methods\_AddTeam.cshtml" />
   </ItemGroup>
 
 </Project>

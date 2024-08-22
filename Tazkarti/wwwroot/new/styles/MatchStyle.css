@@ -1,0 +1,111 @@
+﻿.match-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.match-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.team-logos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+    .team-logos img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+.match-details div {
+    margin-bottom: 5px;
+}
+
+.match-details span {
+    font-weight: bold;
+}
+
+.stadium, .time, .stage {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+    .stadium img, .time img {
+        height: 20px;
+        margin-right: 5px;
+    }
+
+.book-ticket {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+    .book-ticket button {
+        padding: 10px 15px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+.availability {
+    display: flex;
+    align-items: center;
+    color: green;
+}
+
+    .availability span {
+        margin-left: 5px;
+    }
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .match-card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .match-info {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .match-details {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .stadium, .time, .stage {
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
+
+    .book-ticket {
+        width: auto;
+    }
+}

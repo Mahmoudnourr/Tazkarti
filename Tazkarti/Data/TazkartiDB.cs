@@ -18,6 +18,8 @@ namespace Tazkarti.Data
 			modelBuilder.Entity<MatchTicket>()
 				.HasKey(k => k.TicketId);
 			base.OnModelCreating(modelBuilder);
+			modelBuilder.Entity<TournamentTeam>()
+				.HasKey(e => new { e.TournamentId, e.TeamId });
 		}
 		public DbSet<Category>Categories { get; set; }
 		public DbSet<Event> Events { get; set; }
@@ -27,6 +29,7 @@ namespace Tazkarti.Data
         public DbSet<MatchTicket> MatchesTickets { get; set; }
 		public DbSet<Team> Teams { get; set; }
 		public DbSet<Ticket> Tickets { get; set; }
-
+		public DbSet<Tournament> Tournaments { get; set; }
+		public DbSet<TournamentTeam> TournamentsTeams { get;set; }
 	}
 }

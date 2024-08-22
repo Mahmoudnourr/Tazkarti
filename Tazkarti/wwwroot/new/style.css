@@ -5,6 +5,7 @@
 .body{
     margin-bottom:0px;
     padding:0px;
+   
 }
 .im
 {
@@ -115,3 +116,21 @@
     .footer-component p {
         margin: 5px 0;
     }
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.footer-component {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #28a745;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

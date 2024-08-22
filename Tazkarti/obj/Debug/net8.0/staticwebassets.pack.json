@@ -193,6 +193,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
       "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -429,6 +433,10 @@
       "PackagePath": "staticwebassets\\new\\5634934.jpg"
     },
     {
+      "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\AlahlyLogo.jpeg",
+      "PackagePath": "staticwebassets\\new\\AlahlyLogo.jpeg"
+    },
+    {
       "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\Bootstrap\\_bootswatch.scss",
       "PackagePath": "staticwebassets\\new\\Bootstrap\\_bootswatch.scss"
     },
@@ -437,8 +445,16 @@
       "PackagePath": "staticwebassets\\new\\Bootstrap\\_variables.scss"
     },
     {
+      "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\MasryLogo.png",
+      "PackagePath": "staticwebassets\\new\\MasryLogo.png"
+    },
+    {
       "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\new\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\calendar.svg",
+      "PackagePath": "staticwebassets\\new\\calendar.svg"
     },
     {
       "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\index.html",
@@ -461,12 +477,28 @@
       "PackagePath": "staticwebassets\\new\\sprot-card-icon.svg"
     },
     {
+      "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\stadium.svg",
+      "PackagePath": "staticwebassets\\new\\stadium.svg"
+    },
+    {
       "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\style.css",
       "PackagePath": "staticwebassets\\new\\style.css"
     },
     {
+      "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\styles\\Admin\\AddingTournament.css",
+      "PackagePath": "staticwebassets\\new\\styles\\Admin\\AddingTournament.css"
+    },
+    {
+      "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\styles\\Admin\\AdminLayoutStyle.css",
+      "PackagePath": "staticwebassets\\new\\styles\\Admin\\AdminLayoutStyle.css"
+    },
+    {
       "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\styles\\LoginStyle.css",
       "PackagePath": "staticwebassets\\new\\styles\\LoginStyle.css"
+    },
+    {
+      "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\styles\\MatchStyle.css",
+      "PackagePath": "staticwebassets\\new\\styles\\MatchStyle.css"
     },
     {
       "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\new\\styles\\RegisterStyle.css",

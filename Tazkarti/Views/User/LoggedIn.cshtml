@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LoggedIn.cshtml";
+    ViewData["Title"] = "Tazkarti";
+}
+<html>
+<head>
+    <link href="/new/style.css" rel="stylesheet" />
+    <title>@ViewData["Title"]</title>
+
+</head>
+<body>
+
+    <div class="next-plan-component">
+        <h2>What do you want to enjoy?</h2>
+        <p>
+            Book whatever is fun for you
+        </p>
+    </div>
+    <div class="ticket-container">
+        <div class="ticket-box sports">
+            <div class="ticket-icon">
+                <img src="/new/sprot-card-icon.svg" alt="Sports Icon">
+            </div>
+            <a asp-action="Matches" asp-controller="Match">
+                <div class="ticket-text">
+                    <h2>Sports</h2>
+                    <p>Match Tickets</p>
+                </div>
+            </a>
+        </div>
+        <div class="ticket-box entertainment">
+            <div class="ticket-icon">
+                <img src="/new/otherEvents.svg" alt="Entertainment Icon">
+            </div>
+            <div class="ticket-text">
+                <h2>Entertainment</h2>
+                <p>Event Tickets</p>
+            </div>
+        </div>
+    </div>
+    <div class="Logandreg">
+        <button type="button" class="btn btn-outline-secondary">Log in</button>
+        <span>or</span>
+        <button type="button" class="btn btn-success">Register</button>
+    </div>
+
+</body>
+</html>

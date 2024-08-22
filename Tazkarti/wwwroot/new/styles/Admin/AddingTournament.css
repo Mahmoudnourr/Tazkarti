@@ -1,0 +1,27 @@
+﻿#Conn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+#Tour {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.b {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+    .b button {
+        background-color: #219f45;
+        border: none;
+    }
+
+.o-inp {
+    width: 100%;
+}

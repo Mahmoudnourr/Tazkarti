@@ -63,23 +63,36 @@
                 if (user is not null)
                 {
                     SignInResult result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, false);
-                    if (result.Succeeded)
+                if (result.Succeeded)
+                {
+                    var _Role = await _userManager.GetRolesAsync(user);
+                    if (_Role.Contains("Admin"))
                     {
-                    
-                    return new LoginResult
+                        return new LoginResult
                         {
                             Success = true,
-                            UserName=model.UserName,
+                            UserName = model.UserName,
+                            Role = "Admin"
                         };
                     }
                     else
                     {
                         return new LoginResult
                         {
-						    Success = false,
-						    Errors = new List<string> { "Invalid Password" }
+                            Success = true,
+                            UserName = model.UserName,
+                            Role = "User"
                         };
                     }
+                }
+                else
+                {
+                    return new LoginResult
+                    {
+                        Success = false,
+                        Errors = new List<string> { "Invalid Password" }
+                    };
+                }
                 }
                 else {
 				    return new LoginResult

@@ -5,5 +5,6 @@
         public string UserName { get; set; }
         public bool Success { get; set; }
         public List<String> Errors { get; set; }
+        public string Role { get; set; }
     }
 }
