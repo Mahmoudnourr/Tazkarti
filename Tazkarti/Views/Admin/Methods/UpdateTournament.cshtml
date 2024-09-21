@@ -1,0 +1,65 @@
+@model Tazkarti.Models.Sport.Tournament
+<!DOCTYPE html>
+<html lang="en">
+@{
+	await Html.RenderPartialAsync("~/Views/Shared/Admin/_Head.cshtml");
+}
+
+<body>
+	<div class="wrapper">
+		@{
+			await Html.RenderPartialAsync("~/Views/Shared/Admin/_Sidebar.cshtml");
+		}
+		<div class="main">
+
+			@{
+				await Html.RenderPartialAsync("~/Views/Shared/Admin/Nav2.cshtml");
+			}
+
+			<main class="content px-3 py-2">
+				<div id="dynamicContainer" class="container-fluid" style="width:100%;height:100%">
+					<div id="Conn" style="width:100%;height:100%">
+
+						<form asp-action="SavingTournament" asp-controller="Tournament" method="post" style="width:60%;height:100%" id="formm">
+
+							<div>
+								<label class="col-form-label mt-4" for="inputDefault">Tournament Name</label>
+								<input type="text" class="form-control" placeholder="Tournament" id="name" name="Name" value="@Model.Name">
+								<div id="TournamentError" style="color:red"></div>
+								<span asp-validation-for="Name" class="text-danger"></span>
+							</div>
+							<div>
+								<label class="col-form-label mt-4" for="Year">Year</label>
+								<input type="text" class="form-control" placeholder="Year" id="year" name="Year" value="@Model.Year">
+								<div id="YearError" style="color:red"></div>
+								<span asp-validation-for="Year" class="text-danger"></span>
+							</div>
+
+							<div class="o-inp b">
+								<button type="submit" class="btn btn-primary btn-lg bb" id="btnn">Submit</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+
+			</main>
+
+
+			@{
+				await Html.RenderPartialAsync("~/Views/Shared/Admin/_Footer.cshtml");
+			}
+
+		</div>
+	</div>
+	@{
+		await Html.RenderPartialAsync("~/Views/Shared/Admin/_FooterScript.cshtml");
+
+	}
+	@await Component.InvokeAsync("NToastNotify")
+
+</body>
+
+
+
+</html>

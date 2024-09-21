@@ -193,6 +193,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\images\\Orange-Juice-1-of-1.jpeg",
+      "PackagePath": "staticwebassets\\images\\Orange-Juice-1-of-1.jpeg"
+    },
+    {
+      "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\images\\teams\\Orange-Juice-1-of-1.jpeg",
+      "PackagePath": "staticwebassets\\images\\teams\\Orange-Juice-1-of-1.jpeg"
+    },
+    {
       "Id": "D:\\mvc projs\\tazkarti\\Tazkarti\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
     },

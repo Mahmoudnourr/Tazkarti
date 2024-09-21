@@ -1,0 +1,21 @@
+﻿<div class="content1" style="height:100%;width:80%" id="dd">
+	<form asp-action="Search" asp-controller="Admin" method="post" id="seachform">
+
+		<div class="input-group mb-3">
+			<input type="text" name="name" class="form-control" placeholder="Tournament Name" aria-label="Search for a tournament" aria-describedby="button-addon2" id="Sname">
+			<button class="btn btn-primary" type="submit" id="button-addon2">Search</button>
+		</div>
+	</form>
+	<div class="TourTable" style="height:100%;width:100%">
+		@{
+			await Html.RenderPartialAsync("~/Views/Admin/Methods/_TournamentsList.cshtml");
+		}
+	</div>
+</div>
+<style>
+	.content1 {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+</style>

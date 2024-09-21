@@ -26,8 +26,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5WaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/mvc projs/tazkarti/Tazkarti/Views/Admin/Methods/_AddTournamentPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWV0aG9kc1xfQWRkVG91cm5hbWVudFBhcnRpYWwuY3NodG1s
+[D:/mvc projs/tazkarti/Tazkarti/Views/Admin/Methods/AddTeamView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWV0aG9kc1xBZGRUZWFtVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/mvc projs/tazkarti/Tazkarti/Views/Admin/Methods/AddTournamentView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWV0aG9kc1xBZGRUb3VybmFtZW50Vmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/mvc projs/tazkarti/Tazkarti/Views/Admin/Methods/SearchTournament.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWV0aG9kc1xTZWFyY2hUb3VybmFtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/mvc projs/tazkarti/Tazkarti/Views/Admin/Methods/UpdateTournament.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWV0aG9kc1xVcGRhdGVUb3VybmFtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/mvc projs/tazkarti/Tazkarti/Views/Admin/Methods/_crud.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWV0aG9kc1xfY3J1ZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/mvc projs/tazkarti/Tazkarti/Views/Admin/Methods/_TournamentsList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWV0aG9kc1xfVG91cm5hbWVudHNMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/mvc projs/tazkarti/Tazkarti/Views/Admin/Methods/_UpdateTournament.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWV0aG9kc1xfVXBkYXRlVG91cm5hbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/mvc projs/tazkarti/Tazkarti/Views/Admin/_AdminLayout.cshtml]
@@ -56,6 +80,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/mvc projs/tazkarti/Tazkarti/Views/Match/Matches.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0Y2hcTWF0Y2hlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/mvc projs/tazkarti/Tazkarti/Views/Shared/Admin/Nav2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluXE5hdjIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/mvc projs/tazkarti/Tazkarti/Views/Shared/Admin/_Footer.cshtml]

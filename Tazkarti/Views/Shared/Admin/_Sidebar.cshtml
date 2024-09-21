@@ -9,95 +9,105 @@
 				Admin Methods
 			</li>
 			<li class="sidebar-item">
-				<a class="sidebar-link" href="#" data-target="AddTournament">
-					<i class="fa-solid fa-list pe-2"></i>
-					Add Tournament
+				<a class="sidebar-link collapsed" data-bs-target="#tournament" data-bs-toggle="collapse"
+				   aria-expanded="false">
+					<i class="fa-solid fa-file-lines pe-2"></i>
+					Tournament
 				</a>
+				<ul id="tournament" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+					<li class="sidebar-item">
+						<a class="sidebar-link" asp-action="AddTournament" asp-controller="Tournament">
+							<i class="fa-solid fa-list pe-2"></i>
+							Add Tournament
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" asp-action="SearchTournament" asp-controller="Tournament">
+							<i class="fa-solid fa-search pe-2"></i>
+							Search Tournament
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" asp-action="UpdateTournament" asp-controller="Admin">
+							<i class="fa-solid fa-edit pe-2"></i>
+							Update Tournament
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" asp-action="DeleteTournament" asp-controller="Admin">
+							<i class="fa-solid fa-trash pe-2"></i>
+							Delete Tournament
+						</a>
+					</li>
+				</ul>
 			</li>
 			<li class="sidebar-item">
-				<a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
+				<a class="sidebar-link collapsed" data-bs-target="#team" data-bs-toggle="collapse"
 				   aria-expanded="false">
 					<i class="fa-solid fa-file-lines pe-2"></i>
 					Team
 				</a>
-				<ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+				<ul id="team" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="#" data-target="AddTeam">
-							<i class="fa-solid fa-file-lines pe-2"></i>
+						<a class="sidebar-link" asp-action="AddTeam" asp-controller="Admin">
+							<i class="fa-solid fa-plus pe-2"></i>
 							Add Team
 						</a>
 					</li>
 					<li class="sidebar-item">
-						<a asp-action="AdminView" asp-controller="Auth" class="sidebar-link">Search For Team</a>
+						<a class="sidebar-link" asp-action="SearchTeam" asp-controller="Admin">
+							<i class="fa-solid fa-search pe-2"></i>
+							Search Team
+						</a>
 					</li>
 					<li class="sidebar-item">
-						<a asp-action="AdminView" asp-controller="Auth" class="sidebar-link">Update Team</a>
+						<a class="sidebar-link" asp-action="UpdateTeam" asp-controller="Admin">
+							<i class="fa-solid fa-edit pe-2"></i>
+							Update Team
+						</a>
 					</li>
 					<li class="sidebar-item">
-						<a asp-action="AdminView" asp-controller="Auth" class="sidebar-link">Delete Team</a>
+						<a class="sidebar-link" asp-action="DeleteTeam" asp-controller="Admin">
+							<i class="fa-solid fa-trash pe-2"></i>
+							Delete Team
+						</a>
 					</li>
 				</ul>
 			</li>
 			<li class="sidebar-item">
-				<a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
+				<a class="sidebar-link collapsed" data-bs-target="#match" data-bs-toggle="collapse"
 				   aria-expanded="false">
-					<i class="fa-solid fa-sliders pe-2"></i>
-					Posts
+					<i class="fa-solid fa-file-lines pe-2"></i>
+					Match
 				</a>
-				<ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+				<ul id="match" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
 					<li class="sidebar-item">
-						<a href="#" class="sidebar-link">Post 1</a>
+						<a class="sidebar-link" asp-action="AddMatch" asp-controller="Admin">
+							<i class="fa-solid fa-plus pe-2"></i>
+							Add Match
+						</a>
 					</li>
 					<li class="sidebar-item">
-						<a href="#" class="sidebar-link">Post 2</a>
+						<a class="sidebar-link" asp-action="SearchMatch" asp-controller="Admin">
+							<i class="fa-solid fa-search pe-2"></i>
+							Search Match
+						</a>
 					</li>
 					<li class="sidebar-item">
-						<a href="#" class="sidebar-link">Post 3</a>
+						<a class="sidebar-link" asp-action="UpdateMatch" asp-controller="Admin">
+							<i class="fa-solid fa-edit pe-2"></i>
+							Update Match
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" asp-action="DeleteMatch" asp-controller="Admin">
+							<i class="fa-solid fa-trash pe-2"></i>
+							Delete Match
+						</a>
 					</li>
 				</ul>
 			</li>
-			<li class="sidebar-item">
-				<a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
-				   aria-expanded="false">
-					<i class="fa-regular fa-user pe-2"></i>
-					Auth
-				</a>
-				<ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-					<li class="sidebar-item">
-						<a href="#" class="sidebar-link">Login</a>
-					</li>
-					<li class="sidebar-item">
-						<a href="#" class="sidebar-link">Register</a>
-					</li>
-					<li class="sidebar-item">
-						<a href="#" class="sidebar-link">Forgot Password</a>
-					</li>
-				</ul>
-			</li>
-			<li class="sidebar-header">
-				Multi Level Menu
-			</li>
-			<li class="sidebar-item">
-				<a href="#" class="sidebar-link collapsed" data-bs-target="#multi" data-bs-toggle="collapse"
-				   aria-expanded="false">
-					<i class="fa-solid fa-share-nodes pe-2"></i>
-					Multi Dropdown
-				</a>
-				<ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-					<li class="sidebar-item">
-						<a href="#" class="sidebar-link collapsed" data-bs-target="#level-1"
-						   data-bs-toggle="collapse" aria-expanded="false">Level 1</a>
-						<ul id="level-1" class="sidebar-dropdown list-unstyled collapse">
-							<li class="sidebar-item">
-								<a href="#" class="sidebar-link">Level 1.1</a>
-							</li>
-							<li class="sidebar-item">
-								<a href="#" class="sidebar-link">Level 1.2</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
+			<!-- Existing code continues here -->
 		</ul>
 	</div>
 </aside>

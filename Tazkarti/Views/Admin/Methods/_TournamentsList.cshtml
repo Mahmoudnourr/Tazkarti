@@ -1,0 +1,52 @@
+﻿@using Tazkarti.Models.Sport
+@model List<Tournament>
+@if (Model != null && Model.Any())
+{
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th scope="col">Tournament Number</th>
+				<th scope="col">Tournament Name</th>
+				<th scope="col">Tournament Year</th>
+
+			</tr>
+		</thead>
+		@for (var i = 0; i < Model.Count(); i++)
+		{
+
+			<tbody>
+				@if (i % 2 == 0)
+				{
+					<tr class="table-active">
+						<th scope="row">@Model[i].Id</th>
+						<td>@Model[i].Name</td>
+						<td>@Model[i].Year</td>
+						<td>
+							<a asp-route-id="@Model[i].Id" asp-action="Update" asp-controller="Admin"><button class="btn btn-primary btn-update" type="button" data-id="@Model[i].Id">Update</button></a>
+							<button class="btn btn-danger btn-delete" type="button" data-id="@Model[i].Id">Delete</button>
+						</td>
+					</tr>
+				}
+				else
+				{
+					<tr>
+						<th scope="row">@Model[i].Id</th>
+						<td>@Model[i].Name</td>
+						<td>@Model[i].Year</td>
+						<td>
+							<button class="btn btn-primary btn-update" type="button" data-id="@Model[i].Id" asp-route-id="@Model[i].Id" asp-action="Update" asp-controller="Admin">Update</button>
+							<button class="btn btn-danger btn-delete" type="button" data-id="@Model[i].Id">Delete</button>
+						</td>
+					</tr>
+				}
+			</tbody>
+		}
+
+		<tbody>
+		</tbody>
+	</table>
+}
+else
+{
+	<p>No tournaments found.</p>
+}

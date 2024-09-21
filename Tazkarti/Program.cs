@@ -38,8 +38,9 @@ namespace Tazkarti
 			builder.Services.AddControllersWithViews();
 			// Dependency Injection
 			builder.Services.AddScoped<IAuthService, AuthService>();
-			builder.Services.AddScoped<IAdminservice, AdminService>();
+			builder.Services.AddScoped<ITournamentService, TournamentService>();
 			builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+			builder.Services.AddScoped<ITeamService, TeamService>();
 			builder.Services.AddHttpContextAccessor();
 
 			// Add Toastr for notifications
@@ -49,6 +50,7 @@ namespace Tazkarti
 				PositionClass = ToastPositions.TopRight,
 				PreventDuplicates = true,
 				CloseButton = true,
+			 
 			});
 
 			builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
@@ -75,6 +77,7 @@ namespace Tazkarti
 			app.MapControllerRoute(
 				name: "default",
 				pattern: "{controller=Home}/{action=Index}/{id?}");
+				
 
 			app.Run();
 		}

@@ -447,4 +447,8 @@ D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\NToastNotify.dll
 D:\mvc projs\tazkarti\Tazkarti\obj\Debug\net8.0\Tazkarti.MvcApplicationPartsAssemblyInfo.cs
-D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\System.Text.Json.dll
+D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\refs\Microsoft.Extensions.Identity.Core.dll
+D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\refs\Microsoft.Extensions.Identity.Stores.dll
+D:\mvc projs\tazkarti\Tazkarti\bin\Debug\net8.0\refs\System.Text.Json.dll

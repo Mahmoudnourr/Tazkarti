@@ -1,0 +1,118 @@
+﻿@using Tazkarti.Models.Sport;
+@model List<Tournament>
+<!DOCTYPE html>
+<html lang="en">
+@{
+	await Html.RenderPartialAsync("~/Views/Shared/Admin/_Head.cshtml");
+}
+
+<body>
+	<div class="wrapper">
+		@{
+			await Html.RenderPartialAsync("~/Views/Shared/Admin/_Sidebar.cshtml");
+		}
+		<div class="main">
+
+			@{
+				await Html.RenderPartialAsync("~/Views/Shared/Admin/Nav2.cshtml");
+			}
+		   
+
+			<main class="content px-3 py-2">
+
+
+				<div id="dynamicContainer" class="container-fluid" style="width:100%;height:100%">
+					<div class="content1" style="height:100%;width:80%" id="dd">
+						<form asp-action="SearchTournament" asp-controller="Tournament" method="post" id="seachform">
+
+							<div class="input-group mb-3">
+								<input type="text" name="name" class="form-control" placeholder="Tournament Name" aria-label="Search for a tournament" aria-describedby="button-addon2" id="Sname">
+								<button class="btn btn-primary" type="submit" id="button-addon2">Search</button>
+							</div>
+						</form>
+						<div class="TourTable" style="height:100%;width:100%">
+							@if (Model != null && Model.Any())
+{
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th scope="col">Tournament Number</th>
+				<th scope="col">Tournament Name</th>
+				<th scope="col">Tournament Year</th>
+
+			</tr>
+		</thead>
+		@for (var i = 0; i < Model.Count(); i++)
+		{
+
+			<tbody>
+				@if (i % 2 == 0)
+				{
+					<tr class="table-active">
+						<th scope="row">@Model[i].Id</th>
+						<td>@Model[i].Name</td>
+						<td>@Model[i].Year</td>
+						<td>
+							<a asp-route-id="@Model[i].Id" asp-action="UpdateTournament" asp-controller="Tournament"><button class="btn btn-primary btn-update" type="button" data-id="@Model[i].Id">Update</button></a>
+							<a asp-route-id="@Model[i].Id" asp-action="DeleteTournament" asp-controller="Tournament"><button class="btn btn-danger btn-delete delete-item" type="button" data-id="@Model[i].Id">Delete</button></a>
+						</td>
+
+					</tr>
+				}
+				else
+				{
+					<tr>
+						<th scope="row">@Model[i].Id</th>
+						<td>@Model[i].Name</td>
+						<td>@Model[i].Year</td>
+						<td>
+							<a asp-route-id="@Model[i].Id" asp-action="UpdateTournament" asp-controller="Tournament"><button class="btn btn-primary btn-update" type="button" data-id="@Model[i].Id">Update</button></a>
+							<a asp-route-id="@Model[i].Id" asp-action="DeleteTournament" asp-controller="Tournament"><button class="btn btn-danger btn-delete delete-item" type="button" data-id="@Model[i].Id">Delete</button></a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		}
+
+		<tbody>
+		</tbody>
+	</table>
+}
+else
+{
+	<p>No tournaments found.</p>
+}
+						</div>
+					</div>
+					<style>
+						.content1 {
+							display: flex;
+							align-items: center;
+							flex-direction: column;
+						}
+					</style>
+
+				</div>
+
+			</main>
+
+
+			@{
+				await Html.RenderPartialAsync("~/Views/Shared/Admin/_Footer.cshtml");
+			}
+
+		</div>
+	</div>
+	@{
+		await Html.RenderPartialAsync("~/Views/Shared/Admin/_FooterScript.cshtml");
+
+	}
+	@section Scripts {
+   
+}	
+
+	@await Component.InvokeAsync("NToastNotify")
+
+</body>
+</html>
+
